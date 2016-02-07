@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/richendacodes/13-0portfolio#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "express-session": "^1.13.0"
   }
 }

@@ -1,5 +1,6 @@
 var express = require('express');
 var PORT = process.env.PORT || 8090;
+var session = require('express-session');
 
 var app = express();
 
@@ -22,6 +23,11 @@ app.get('/portfolio', function(req, res) {
   res.sendFile(process.cwd() + "/public/portfolio.html");
 });
 
+app.get('/portfolio/:project', function(req, res) {
+   console.log("Sorry, no project with that name.");
+   res.send("Sorry, no project with that name.")
+});
+
 app.get('/resume', function(req, res) {
   res.sendFile(process.cwd() + "/public/resume.html");
 });
@@ -37,6 +43,12 @@ app.get("/index", function(req, res) {
 app.get("/", function(req, res) {
   res.sendFile(process.cwd() + "/public/index.html");
 });
+
+
+app.use(session({
+  secret: 'keyboard pig'
+}));
+
 
 app.listen(PORT, function() {
   console.log('Listening on port %s', PORT);
