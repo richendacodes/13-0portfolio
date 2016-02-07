@@ -1,0 +1,54 @@
+body {
+  
+}
+
+.navbar-brand {
+  font-family: Nova Mono;
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+.panel-heading h4, .modal-title {
+  font-family: Nova Mono;
+}
+
+.control{
+  text-align: center;
+  width: 100px;
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  border-radius: 15px;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  cursor: pointer;
+}
+.control:hover{
+  opacity: .7;
+}
+
+.btn-primary {
+ 
+}
+
+.btn-hide {
+  display: none;
+}
+
+.downplay {
+  margin-top: 150px;
+}
+
+#msg {
+  text-align: center;
+  font-size: 18px;
+}
+
+.hundred {
+  width: 100%;
+}
+.fifty {
+  width: 50%;
+}

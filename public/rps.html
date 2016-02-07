@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RPS++</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/united/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic|Nova+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/rps-style.css">
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"> ROCK <i class="fa fa-hand-rock-o"></i> |  PAPER <i class="fa fa-hand-paper-o"></i> | SCISSORS <i class="fa fa-hand-scissors-o"></i> | <i class="fa fa-plus"></i> <i class="fa fa-plus"></i></a>
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>ROUND</h4>
+          </div>
+          <div class="panel-body">
+            <p id="rounds">0</p>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>SCORE</h4>
+          </div>
+          <div class="panel-body">
+            <p id="user-score">User: 0</p>
+            <p id="computer-score">Computer: 0</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <a class="btn btn-default btn-success btn-block btn-lg">Play Game</a>
+        <div class="row">
+          <div class="col-md-4">
+            <a class="btn btn-default btn-primary btn-hide control" data-value="rock"><i class="fa fa-hand-rock-o fa-5x"></i><br>ROCK</a>
+          </div>
+          <div class="col-md-4">
+            <a class="btn btn-default btn-primary btn-hide control" data-value="paper"><i class="fa fa-hand-paper-o fa-5x"></i><br>paper</a>
+          </div>
+          <div class="col-md-4">
+            <a class="btn btn-default btn-primary btn-hide control" data-value="scissors"><i class="fa fa-hand-scissors-o fa-4x"></i><br>Scissors</a>
+          </div>
+        </div>
+        <div class="row downplay">
+          <div class="col-md-6">
+            <a class="btn btn-default btn-primary btn-hide control" data-value="lizard"><i class="fa fa-hand-lizard-o fa-4x"></i><br>Lizard</a>
+          </div>
+          <div class="col-md-6">
+            <a class="btn btn-default btn-primary btn-hide control" data-value="spock"><i class="fa fa-hand-spock-o fa-4x"></i><br>Spock</a>
+          </div>
+        </div>
+        <div class="row downplay">
+          <div class="col-md-12">
+            <p id="msg"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h4>Leaderboard</h4> 
+          </div>
+          <div class="panel-body">
+            <div class="example-base example-leaderboard l-demo-container">
+              <table id="leaderboardTable" class="hundred">
+                <tr>
+                  <th class="fifty">Player</th>
+                  <th class="fifty">Score</th>
+                </tr>
+              </table>
+              <footer>
+                
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">You won! Did you get a high score?</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input class="example-leaderboard-name form-control" type="text" id="nameInput" placeholder="Enter a name"><br>
+            <input class="example-leaderboard-score form-control" type="text" id="scoreInput" placeholder="Record your score...">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p>Hit enter to submit your score</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootbox.min.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+
+</body>
+</html>
