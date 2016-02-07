@@ -15,6 +15,7 @@ app.use('/portfolio/js', express.static('public/js'));
 app.use('/css', express.static('public/css'));
 app.use('/portfolio/css', express.static('public/css'));
 app.use('/img', express.static('public/img'));
+app.use('/portfolio/img', express.static('public/img'));
 
 app.get('/blog', function(req, res) {
   res.sendFile(process.cwd() + "/public/blog.html");
